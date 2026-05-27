@@ -1,8 +1,8 @@
 package likelion_14th.api.controller.translate;
 
 import jakarta.validation.Valid;
-import likelion_14th.api.dto.request.TranslateRequest;
-import likelion_14th.api.dto.response.TranslationListResponse;
+import likelion_14th.api.dto.request.translate.TranslateRequest;
+import likelion_14th.api.dto.response.translate.TranslationListResponse;
 import likelion_14th.api.service.translate.TranslateService;
 import likelion_14th.api.global.response.ApiResponse;
 import lombok.RequiredArgsConstructor;

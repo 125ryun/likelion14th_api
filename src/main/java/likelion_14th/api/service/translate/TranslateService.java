@@ -2,8 +2,8 @@ package likelion_14th.api.service.translate;
 
 import com.google.cloud.translate.Translate;
 import com.google.cloud.translate.Translation;
-import likelion_14th.api.dto.request.TranslateRequest;
-import likelion_14th.api.dto.response.TranslationListResponse;
+import likelion_14th.api.dto.request.translate.TranslateRequest;
+import likelion_14th.api.dto.response.translate.TranslationListResponse;
 import likelion_14th.api.exception.translate.GoogleTranslateException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

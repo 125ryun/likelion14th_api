@@ -1,4 +1,4 @@
-package likelion_14th.api.dto.request;
+package likelion_14th.api.dto.request.translate;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;

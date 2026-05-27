@@ -1,4 +1,4 @@
-package likelion_14th.api.dto.response;
+package likelion_14th.api.dto.response.translate;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

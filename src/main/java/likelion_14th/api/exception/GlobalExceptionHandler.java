@@ -1,5 +1,6 @@
 package likelion_14th.api.exception;
 
+import likelion_14th.api.exception.ai.AiResponseException;
 import likelion_14th.api.exception.translate.GoogleTranslateException;
 import likelion_14th.api.global.response.ApiResponse;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiResponse<List<String>>> handleValidationExceptions(MethodArgumentNotValidException e) {
         return buildErrorResponse(HttpStatus.BAD_REQUEST, "입력 값이 유효하지 않습니다.", getErrorFields(e));
@@ -20,6 +22,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(GoogleTranslateException.class)
     public ResponseEntity<ApiResponse<Void>> handleGoogleTranslateException(GoogleTranslateException e) {
+        return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
+    }
+
+    @ExceptionHandler(AiResponseException.class)
+    protected ResponseEntity<ApiResponse<Void>> handleAiResponseException(AiResponseException e) {
         return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
     }
 

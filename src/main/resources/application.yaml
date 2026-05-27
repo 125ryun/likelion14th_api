@@ -3,6 +3,14 @@ spring:
     name: api
   config:
     import: optional:file:.env[.properties]
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.3
+          max-tokens: 300
 
 google:
   cloud:

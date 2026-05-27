@@ -1,4 +1,4 @@
-package likelion_14th.api.dto.response;
+package likelion_14th.api.dto.response.translate;
 
 import com.google.cloud.translate.Translation;
 import lombok.AllArgsConstructor;
