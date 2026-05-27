@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: api
+  config:
+    import: optional:file:.env[.properties]
+
+google:
+  cloud:
+    credentials:
+      location: ${GOOGLE_APPLICATION_CREDENTIALS_PATH}
